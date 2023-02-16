@@ -1,0 +1,12 @@
+import sqlite3
+conn=sqlite3.connect('Mid-morning.db')
+print("open database successfully")
+conn.execute("INSERT INTO Students(ID,NAME,AGE,SCHOOL,GENDER)VALUES(1, 'MASEK',30,'EMOBILIS','MALE')")
+conn.execute("INSERT INTO Students(ID,NAME,AGE,SCHOOL,GENDER)VALUES(2, 'MARCUS',40,'EMOBILIS','MALE')")
+conn.execute("INSERT INTO Students(ID,NAME,AGE,SCHOOL,GENDER)VALUES(3, 'MARK',50,'EMOBILIS','FEMALE')")
+conn.execute("INSERT INTO Students(ID,NAME,AGE,SCHOOL,GENDER)VALUES(4, 'TIMO',60,'MODCOM','MALE')")
+conn.execute("INSERT INTO Students(ID,NAME,AGE,SCHOOL,GENDER)VALUES(5, 'MARVIN',20,'MODCOM','MALE')")
+conn.execute("INSERT INTO Students(ID,NAME,AGE,SCHOOL,GENDER)VALUES(6, 'PETER',40,'EMOBILI','FEMALE')")
+conn.commit()
+print("Records added successfully")
+conn.close()
